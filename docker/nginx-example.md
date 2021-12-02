@@ -1,5 +1,6 @@
 # Dockerfile
 
+```bash
 FROM nginx
 USER root
 RUN apt-get update
@@ -7,6 +8,7 @@ RUN apt-get install -y systemctl wget curl unzip gcc vim sudo
 EXPOSE 80
 EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
+```
 
 # start docker
 
