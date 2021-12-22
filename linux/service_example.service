@@ -1,0 +1,15 @@
+[Unit]
+Description=Bridge Daemon
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=bridge-worker
+WorkingDirectory=/opt/bridge-worker/bridge-worker-stg/
+Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+ExecStart=npm run start
+Restart=always
+TimeoutSec=900
+
+[Install]
+WantedBy=multi-user.target

@@ -1,25 +1,37 @@
 # vscode
 
 # Golang
+
 macOS - $HOME/Library/Application\ Support/Code/User/settings.json
+
 ## Add Test Flags
+
 ![add_test_flags](./add_test_flags.jpg "add_test_flags")
+
 ```json
 {
-    "go.testFlags": ["-v"]
+  "go.testFlags": ["-v"]
 }
 ```
+
 ## Add Gopath
+
 ```json
 {
-   "go.gopath": "enter your gopath"
+  "go.gopath": "enter your gopath"
 }
 ```
 
 ## Disable Go Mod
-```json
+
+````json
 {
     "go.toolsEnvVars": {
        "GO111MODULE": "off"
    }
 }
+
+## Regex of remove all comments
+```bash
+//.*|/\*[\s\S\n]*?\*/
+````
