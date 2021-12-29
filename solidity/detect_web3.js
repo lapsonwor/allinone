@@ -13,3 +13,12 @@ window.addEventListener('load', function() {
     startApp()
 
   })
+
+  var accountInterval = setInterval(function() {
+    // Check if account has changed
+    if (web3.eth.accounts[0] !== userAccount) {
+      userAccount = web3.eth.accounts[0];
+      // Call some function to update the UI with the new account
+      updateInterface();
+    }
+  }, 100);
