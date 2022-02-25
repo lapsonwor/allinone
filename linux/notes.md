@@ -37,3 +37,9 @@ sudo mv node-v#.#.#-linux-x64/lib/node_modules/ /usr/local/lib/
 ```bash
 ssh-keygen -t rsa -b 2048 -C "message"
 ```
+
+- update linux timezone
+
+```bash
+sudo dpkg-reconfigure tzdata
+```
