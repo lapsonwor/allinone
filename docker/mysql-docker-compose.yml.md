@@ -3,7 +3,7 @@ version: "3.3"
 services:
   db:
     platform: linux/x86_64
-    image: mysql:5.7
+    image: mysql:latest
     restart: always
     environment:
       MYSQL_DATABASE: "db"
